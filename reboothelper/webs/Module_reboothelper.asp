@@ -175,10 +175,13 @@
                 async: false,
                 success: function (data) {
                     dbus = data.result[0];
-                    console.log(dbus);
                     $('#lbl_Version').html(' v' + dbus['reboothelper_version']);
+                    var val_week = dbus['reboothelper_week'];
+                    if (val_week == "*") {
+                        val_week = 9;
+                    }
                     $(':radio[name="reboot_schedule_enable_x"][value=' + dbus['reboothelper_enable'] + ']').prop('checked', true);
-                    $(':radio[name="reboot_week"][value=' + dbus['reboothelper_week'] + ']').prop('checked', true);
+                    $(':radio[name="reboot_week"][value=' + val_week + ']').prop('checked', true);
                     if (dbus['reboothelper_day'] != "*") {
                         $('#txt_day').val(dbus['reboothelper_day']);
                     }

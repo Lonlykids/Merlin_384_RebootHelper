@@ -26,6 +26,7 @@ stop)
 	;;
 *)
 	if [ "$reboothelper_enable" == "1" ];then
+		logger "[软件中心]: 添加自动重启任务"
 		create_Cron
 	else
 		delete_Cron
