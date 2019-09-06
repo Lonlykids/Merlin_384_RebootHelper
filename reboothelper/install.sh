@@ -28,9 +28,7 @@ cp -rf /tmp/reboothelper/scripts/* /koolshare/scripts/
 cp -rf /tmp/reboothelper/webs/* /koolshare/webs/
 cp -rf /tmp/reboothelper/res/* /koolshare/res/
 cp -rf /tmp/reboothelper/uninstall.sh /koolshare/scripts/uninstall_reboothelper.sh
-if [ "`nvram get model`" == "GT-AC5300" ] || [ "`nvram get model`" == "GT-AX11000" ] || [ -n "`nvram get extendno | grep koolshare`" -a "`nvram get productid`" == "RT-AC86U" ];then
-	cp -rf /tmp/$MODULE/ROG/webs/* /koolshare/webs/
-fi
+
 chmod +x /koolshare/scripts/reboothelper*
 chmod +x /koolshare/scripts/uninstall_reboothelper.sh
 [ ! -L "/koolshare/init.d/S99Reboothelper.sh" ] && ln -sf /koolshare/scripts/reboothelper_config.sh /koolshare/init.d/S99Reboothelper.sh
