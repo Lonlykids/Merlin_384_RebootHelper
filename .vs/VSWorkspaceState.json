@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\reboothelper"
+    "\\reboothelper",
+    "\\reboothelper\\res",
+    "\\reboothelper\\scripts",
+    "\\reboothelper\\webs"
   ],
-  "SelectedNode": "\\reboothelper\\.valid",
+  "SelectedNode": "\\reboothelper",
   "PreviewInSolutionExplorer": false
 }
